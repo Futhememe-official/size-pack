@@ -1,4 +1,5 @@
 use clap::Parser;
+use colored::Colorize;
 
 /// Search for a pattern in a file and display the lines that contain it
 #[derive(Parser)]
@@ -12,5 +13,6 @@ struct Cli {
 fn main() {
     let args = Cli::parse();
 
-    println!("pattern: {:?}, path: {:?}", args.pattern, args.path)
+    println!("\n\n\n pattern: {:?}, path: {:?}", args.pattern, args.path);
+    println!("{}", "Finalizado !".green().bold());
 }
